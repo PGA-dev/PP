@@ -1,33 +1,33 @@
 {% load static %}
 <!--meta data and tags-->
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
-    <head>
-        <meta charset="utf-8" />
-        {% load static %}
-        <!-- custom css file in static folder -->
-        <link rel="stylesheet" href="/static/css/custom.css" />
-        <title>{% block title %}Grocery Budget{% endblock %}</title>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    {% load static %}
+    <!-- custom css file in static folder -->
+    <link rel="stylesheet" href="/static/css/custom.css" />
+    <title>{% block title %}Grocery Budget{% endblock %}</title>
+</head>
 
-    <body>
-        <div id="sidebar">
-            {% block sidebar %}
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/budget/">Budget</a></li>
-            </ul>
-            {% endblock %}
-        </div>
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/budget/">Budget</a></li>
+        </ul>
+        {% endblock %}
+    </div>
 
-        <div id="content">
-            {% block content %}{% endblock %}
-        </div>
-        {% block jsfiles %}
-        <!-- <script type="text/javascript" src="{%/static%}"></script> -->
-        {% endblock jsfiles %}
-        <!-- created JavaScript placeholder in file -->
-    </body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    {% block jsfiles %}
+    <!-- <script type="text/javascript" src="{%/static%}"></script> -->
+    {% endblock jsfiles %}
+    <!-- created JavaScript placeholder in file -->
+</body>
 
 </html>
