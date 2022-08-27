@@ -1,0 +1,16 @@
+<!-- starting point for the index list of grocery items -->
+{% extends "grocery/base.html" %}{% block title %} Grocery {% endblock %}
+{% block content%}
+<div class="container">
+    <h1>Grocery</h1>
+    <!-- grocery list -->
+    <ul>
+        {% for grocery in grocery %}
+        <li>{{ grocery.title }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}
+    <!-- javascript, if applicable -->
+{% block jsfiles %} {% endblock jsfiles %}
