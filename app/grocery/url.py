@@ -22,9 +22,10 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+
 from grocery import views as grocery_views
 
 urlpatterns = [
-    path('', grocery_views.index.asview(), name='home'),
+    path('', grocery_views.index.as_view(), name='home'),
     path('', include('grocery.urls'))
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
