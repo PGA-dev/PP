@@ -16,7 +16,6 @@ class index(APIView):
     renderer_classes = [TemplateHTMLRenderer]
     template_name = 'grocery/index.html'
 
-
     def get(self, request):
         queryset = Grocery.objects.all()
         return Response({'grocery': queryset})
